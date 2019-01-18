@@ -1,15 +1,17 @@
 :root {
-  --blue: #08b3e8;
-  --blue-dark: #3a405a;
-  --grey-dark: #2e282a;
-  --grey: #363537;
+    --blue: #08b3e8;
+    --blue-dark: #3a405a;
+    --grey-darker: #1e1e1e;
+    --grey-dark: #282828;
+    --grey: #363537;
 }
 
 
 body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
     background-color: var(--grey);
+    font-family: 'Roboto', Helvetica, Arial;
 }
 
 #main {
@@ -41,7 +43,25 @@ header span {
 
 nav {
     grid-area: nav;
-    background-color: var(--blue-dark);
+    padding: 60px 0;
+    background-color: var(--grey-dark);
+    color: var(--blue);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+nav .nav-item {
+    padding: 10px 20px;
+    border-bottom: 4px solid var(--grey);
+}
+
+nav .nav-item:hover {
+    color: white;
+    background-color: var(--blue);
+}
+
+nav .nav-item:first-Child {
+    border-top: 4px solid var(--grey);
 }
 
 main {
@@ -50,5 +70,5 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: var(--grey-dark);
+    background-color: var(--grey-darker);
 }
