@@ -30,7 +30,6 @@ body {
 nav {
     grid-area: nav;
     background-color: var(--grey);
-    color: white;
     font-size: 1.2em;
     font-weight: 700;
     overflow: hidden;
@@ -47,6 +46,7 @@ nav img {
 nav .nav-item {
     padding: 10px 20px;
     margin-bottom: 10px;
+    animation: background-default 0.25s linear forwards;
 }
 
 nav .nav-item:first-of-type {
@@ -62,9 +62,13 @@ nav .nav-item i {
     width: 22px;
 }
 
-nav .nav-item:hover {
+/* nav .nav-item:hover {
     color: var(--blue);
     background-color: white;
+} */
+
+nav .nav-item:hover {
+    animation: background-change 0.25s linear forwards;
 }
 
 main {
@@ -75,4 +79,22 @@ main {
 footer {
     grid-area: footer;
     background-color: var(--grey-darker);
+}
+
+@keyframes background-change {
+    100% {  
+        color: var(--blue);
+        background-color: white;
+    }
+}
+
+@keyframes background-default {
+    0% {
+        color: var(--blue);
+        background-color: white; 
+    }
+    100% {
+        color: white;
+        background-color: var(--grey);
+    }
 }
